@@ -1,0 +1,100 @@
+/* + de 730px:
+        -aumentar tamaño de letra
+        -extender el width del H1 a 400px.
+        -poner las tablas una al lado de la otra. (las 2 tablas en la misma fila)
+        
+        poner los planes en la misma fila con margin y centrado
+        */
+/* HEADER */
+        header {
+                height: 480px;
+                width: 100%;
+        }
+
+        header img {
+                margin: 0 auto 40px;
+            }
+
+        .header__div {
+                margin: 0 auto;
+                width: 464px;
+            }
+
+        .header__div h1 {
+                font-size: 4rem;
+                line-height: 4.2rem;
+            }
+        .header__div p {
+                min-height: 48px;
+                width: 382;
+                margin: 25px auto;
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+
+        .header__div .header__button {
+                margin-top: 70px;
+        }
+/* SECTION 1 */
+        .section1__texto h2 {
+                width: 466px;
+                font-size: 4rem;
+                line-height: 4.2rem;
+                margin: 0 auto 30px;
+            }
+
+        .section1__texto p {
+                width: 466px;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                margin: 0 auto;
+            }
+
+        .section1__containerTabla {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+        }
+
+/* SECTION 2 */
+        .section2__titulo h2 {
+                width: 466px;
+                font-size: 4rem;
+                line-height: 4.2rem;
+                margin: 0 auto 30px;
+        }
+
+        .section2__titulo p{
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+
+/* SECTION 3 */
+        .section3 h2{
+        font-size: 4rem;
+        line-height: 4.2rem;
+        }   
+
+/* SECTION 4 */
+.section4__titulo h2 {
+        width: 466px;
+        font-size: 4rem;
+        line-height: 4.2rem;
+        margin: 0 auto 30px;
+}
+
+.section4__titulo p{
+        width: 466px;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin: 0 auto 30px;
+
+    }
+
+
+
+
+            
+        
+
+    

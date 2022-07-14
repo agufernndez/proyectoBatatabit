@@ -1,0 +1,564 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* variables de colores, uso :root */
+:root {
+    --orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --black: #201E1C;
+    --black-2: #282623;
+    --gray: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFFF;
+}
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*me alinea verticalmente cuando esta en COLUMN. */
+    /* align-items: center; diferencia de ilign content??? */
+    width: 100%;
+    min-width: 300px;
+    /* max-width: 380px; */
+    height: 334px; 
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);}
+
+header img {
+    width: 150px;
+    height:24px;
+    margin: 60px auto 40px;
+}
+
+.header__div {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 218px;
+}
+.header__div h1 {
+    min-height: 78px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--off-white);
+}
+
+.header__div p {
+    min-height: 36px;
+    margin: 25px auto;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--soft-orange)
+}
+
+.header__div .header__button {
+    position: absolute;  
+    width: 229px;
+    height: 48px;
+    margin-top: 20px;
+    left: calc(50% - 111px);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF8F7;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+    text-decoration: none;
+    color: #201E1C;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 18.23rem;
+}
+
+.header__button .flechaAbajo {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-left: 6px;
+    background-image: url("../asset/icons/flechaAbajo.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    background-color: var(--off-white);
+}
+
+/* SECTION 1 */
+/* en el video la imagen se pone en css background-image. en html el div esta vacio, solo tiene la clase. y en css pone la imagen y usa cover, no repet, etc*/
+
+.section1 {
+    width: 100%;
+    height: auto;
+}
+
+
+.section1__img {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    margin: 0 auto 150px;
+}
+
+.section1__img img {
+    margin-top: 90px;
+}
+
+.section1__texto {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section1__texto h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.section1__texto p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.section1__containerTabla {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 
+    SI QUISIERA PONERLAS HORIZONTAL Y HACER SCROLL:
+    display: flex (row)
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 30px; 
+    */
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: auto;
+    margin: 30px auto 0;
+}
+
+.section1__containerTabla--monedas {
+    /* scroll-snap-align: center; */
+    width: 81px;
+    height: 23px;
+    margin: 15px auto;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--orange);
+}
+
+.section1__containerTabla--comisiones {
+    /* scroll-snap-align: center; */
+    width: 81px;
+    height: 23px;
+    margin: 15px auto;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--blue);
+}
+
+.containerTabla__tabla {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    /* le puse flex para que el icono de siguiente este al lado de la tabla. esta bien???? */
+}
+
+.containerTabla__tabla table {
+    width: 100%;
+    height: 100%;
+}
+
+.containerTabla__tabla td {
+    width: 50%;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: var(--gray) ;
+    letter-spacing: -0.02em;
+    background-color: var(--just-white);
+    /* si le pongo el background-color a la tabla en general no se van a ver las lineas que dividen todos los td. */
+
+}
+
+.containerTabla__tabla .td__right {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #757575;
+    text-align: center;
+}
+
+.containerTabla__tabla .td__topL {
+    border-top-left-radius: 10px;
+}
+
+.containerTabla__tabla .td__topR {
+    border-top-right-radius: 10px;
+}
+
+.containerTabla__tabla .td__bottomL {
+    border-bottom-left-radius: 10px;
+}
+
+.containerTabla__tabla .td__bottomR {
+    border-bottom-right-radius: 10px;
+}
+
+.containerTabla__tabla .iconoNext {
+    display: flex;
+    align-items: center;
+    /* margin-left: 40px; */
+
+}
+
+.containerTabla__tabla .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../asset/icons/trending-down.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.containerTabla__tabla .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../asset/icons/trending-up.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section1__containerTabla .valores {
+    width: 115px;
+    height: 31px;
+    padding: 8px;
+    text-align: center;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+    margin: 20px auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #282623;
+}
+
+.section1__containerTabla .valoresComisiones {
+    width: 115px;
+    height: 31px;
+    padding: 8px;
+    text-align: center;
+    background-color: var(--soft-blue);
+    border-radius: 8px;
+    margin: 20px auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #282623;
+}
+
+/* SECTION 2 */
+
+.section2 {
+    background-color: var(--black);
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.section2__iconoBatata img {
+    width: 34.35px;
+    height: 24px;
+    position: relative;
+    left: calc(50% - 25px);
+    top: -10px;
+}
+
+.section2__titulo {
+    width: 90%;
+    min-width: 288px;    
+    height: auto;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.section2__titulo h2{
+    margin: 20px 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--just-white);
+
+
+}
+.section2__titulo p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.container__cards {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.section2__cards {
+    min-width: 288px;
+    max-width: 500px;
+    height: 152px;
+    border-radius: 4px;
+    background-color: var(--black-2);
+    margin: 15px auto;
+    /* padding: 15px; */
+    box-shadow: 0px 4px 8px 0px #00000029;
+
+
+}
+
+/* EN ESTE CASO CONSIDERO MEJOR PONER LAS IMG EN EL HTML PARA NO EXTENDER TANTO EL CSS */
+.section2__cards img {
+    margin: 15px 15px 0;
+
+}
+
+.section2__cards h4 {
+    margin: 10px 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+.section2__cards p {
+    margin: 10px 15px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+
+}
+
+/* SECTION 3 */
+.section3 {
+    width: 100%;
+    min-width: 300px;
+    height: 50vh;
+    background-image: url("../asset/img/bitcoinbabyx2.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.section3 h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+/* SECTION 4 - TARJETA PLANES */
+.section4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 10px 60px;
+}
+.section4__titulo h2 {
+    width: 288px;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.section4__titulo p {
+    width: 288px;
+    margin: 20px; /*aca se colapsa el margin bottom del h2 con el margin top 20px del h3, asique solo hay 20px de margen vertical entre ambos. Para que no suceda tengo que poner display:flex o grid*/
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+
+}
+
+.section4__cards {
+    width: 100%;
+    height: 320px;
+    padding: 0 40px;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.cards__info {
+    position: relative;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.cards__info .recomend{
+    position: absolute;
+    display: inline-block;
+    top: -20px;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 31px;
+    padding: 8px;
+    background-color: var(--orange);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.452rem;
+    color: var(--just-white) ;
+}
+
+.cards__info .pago {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+.cards__info .num {
+    font-family: 'Inter', sans-serif;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 6.3rem;
+}
+
+.cards__info .ahorras {
+    width: 158px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--gray);
+}
+
+.cards__info .escoger {
+    display: flex;
+    justify-content: space-around;
+    /* pongo esto de arriba para que el texto y la flecha esten en la misma row alineadas */
+    width: 151px;
+    height: 48px;
+    padding: 12px 16px;
+    background-color: var(--off-white);
+    border: 2px solid var(--orange);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+
+.cards__info .imgFlecha {
+    background-image: url('../asset/icons/arrow-right.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer__left ul {
+    list-style: none;
+}
+
+.footer__left li {
+    margin: 10px;
+}
+
+.footer__left a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    color: var(--just-white);
+}
+
+/* cuando la pantalla empieza a ser + de 730px:
+        -extender el width del H1 a 400px.
+        -poner las tablas una al lado de la otra.
+        -poner en 2 columnas las cards.
+        */

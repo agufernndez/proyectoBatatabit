@@ -1,0 +1,15 @@
+        /* + de 9..px:
+                -poner  2 cards en la misma fila (van a quedar 2 filas con 2 cards)
+                -dejar un margin laft y right (en blanco) de 40px
+        */
+    .container__cards {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    width: 930px;
+}
+
+.section2__cards {
+    width: 400px;
+}
